@@ -99,6 +99,12 @@ nnoremap ; :
 " Auto set directory to current editing file
 set autochdir
 
+" Shortcuts for quickfix
+nnoremap co :copen<cr>
+nnoremap cj :cn<cr>
+nnoremap ck :cp<cr>
+nnoremap cc :cclose<cr>
+
 " Pathogen configuration
 execute pathogen#infect()
 call pathogen#helptags()
