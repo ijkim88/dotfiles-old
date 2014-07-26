@@ -24,8 +24,11 @@ alias ll='ls -GHlah'
 alias grep='grep --color=auto'
 alias editprofile='vim ~/.bash_profile'
 alias sourceprofile='source ~/.bash_profile'
-alias freespace='diskutil info /dev/disk0s2 | grep "Volume Free Space"'
-alias centos='ssh root@135.141.57.112'
+
+# Check free space if on a Mac
+if [[ ${TERM_PROGRAM} == "Apple_Terminal" ]]; then
+  alias freespace='diskutil info /dev/disk0s2 | grep "Volume Free Space"'
+fi
 
 h2d(){
     echo "ibase=16; $@"|bc
