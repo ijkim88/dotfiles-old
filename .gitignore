@@ -3,4 +3,5 @@
 !.bash_profile
 !.gitconfig
 !.gitignore
+!.gitmodules
 !.vimrc
