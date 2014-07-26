@@ -24,18 +24,9 @@ alias ll='ls -GHlah'
 alias grep='grep --color=auto'
 alias editprofile='vim ~/.bash_profile'
 alias sourceprofile='source ~/.bash_profile'
+alias calc='python .scripts/programmers-calculator/ProgrammersCalculator.py'
 
 # Check free space if on a Mac
 if [[ ${TERM_PROGRAM} == "Apple_Terminal" ]]; then
   alias freespace='diskutil info /dev/disk0s2 | grep "Volume Free Space"'
 fi
-
-h2d(){
-    echo "ibase=16; $@"|bc
-}
-d2h(){
-    echo "obase=16; $@"|bc
-}
-h2b(){
-    echo "ibase=16;obase=2;$@"|bc
-}
