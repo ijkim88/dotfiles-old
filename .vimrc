@@ -127,8 +127,10 @@ nnoremap <leader>ir :cd ~/Dropbox/Programming/Arduino/empty/<cr>
     \:!ino upload<cr>
     \:cd %:p:h/..<cr>
 
-" Python-Mode column color
+" Python-Mode options
 let g:pymode_options = 0
+let g:pymode_lint_signs = 0
+let g:pymode_lint_on_write = 0
 
 "nnoremap <leader>x :set filetype=xml<cr>
 "  \:source ~/.vim/bundle/xmledit/ftplugin/xml.vim<cr>
