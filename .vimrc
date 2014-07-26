@@ -128,7 +128,7 @@ nnoremap <leader>ir :cd ~/Dropbox/Programming/Arduino/empty/<cr>
     \:cd %:p:h/..<cr>
 
 " Python-Mode column color
-" let g:pymode_options_max_line_length = 79
+let g:pymode_options = 0
 
 "nnoremap <leader>x :set filetype=xml<cr>
 "  \:source ~/.vim/bundle/xmledit/ftplugin/xml.vim<cr>
