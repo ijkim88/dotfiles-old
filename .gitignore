@@ -6,4 +6,5 @@
 !.gitconfig
 !.gitignore
 !.gitmodules
+!.tmux.conf
 !.vimrc
