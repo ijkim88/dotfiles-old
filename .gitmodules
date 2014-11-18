@@ -7,3 +7,6 @@
 [submodule ".scripts/programmers-calculator"]
 	path = .scripts/programmers-calculator
 	url = https://github.com/ijkim88/programmers-calculator.git
+[submodule ".vim/bundle/Smyck-Color-Scheme"]
+	path = .vim/bundle/Smyck-Color-Scheme
+	url = https://github.com/hukl/Smyck-Color-Scheme.git
