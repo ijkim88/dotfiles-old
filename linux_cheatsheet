@@ -32,3 +32,9 @@ git submodule add [git repo url]
 git add [files or '.' for all]
 git commit -m "[comment]"
 git push
+
+# Removing a submodule
+git submodule deinit [path]
+git rm [path]
+git commit -m "[comment]"
+git push
