@@ -1,0 +1,34 @@
+# How to install tmux on Linux without root access
+cd ~
+mkdir local
+mkdir temp
+mv tmux-1.5.tar.gz temp
+mv libevent-2.0.12-stable.tar.gz temp
+cd temp
+tar xvfz tmux-1.5.tar.gz
+tar xvfz libevent-2.0.12-stable.tar.gz
+cd libevent-2.0.12-stable
+./configure --prefix=$HOME/local
+make
+make install
+cd ../tmux-1.5
+DIR="$HOME/local"
+./configure CFLAGS="-I$DIR/include" LDFLAGS="-L$DIR/lib"
+make
+cp tmux ~/local/bin
+export PATH=$HOME/local/bin:$PATH
+export LD_LIBRARY_PATH="$HOME/local/lib"
+tmux
+
+# Setting up dotfiles on new system
+git clone https://github.com/ijkim88/dotfiles.git
+ln -s dotfiles/.bash_profile .bash_profile
+ln -s dotfiles/.vim/ .vim
+ln -s dotfiles/.vimrc .vimrc
+git submodule update --init
+
+# Installing new submodule
+git submodule add [git repo url]
+git add [files or '.' for all]
+git commit -m "[comment]"
+git push
