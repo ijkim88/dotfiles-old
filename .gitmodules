@@ -7,3 +7,6 @@
 [submodule ".scripts/programmers-calculator"]
 	path = .scripts/programmers-calculator
 	url = https://github.com/ijkim88/programmers-calculator.git
+[submodule ".vim/bundle/lusty"]
+	path = .vim/bundle/lusty
+	url = https://github.com/sjbach/lusty.git
