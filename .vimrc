@@ -10,6 +10,9 @@ syntax enable
 " Turn on the wild menu
 "set wildmenu
 
+" Set hidden (not sure what this does)
+set hidden
+
 " Always show current position
 set ruler
 
@@ -83,6 +86,9 @@ set textwidth=79
 set formatoptions=t
 " set colorcolumn=85
 
+" Fix backsapce
+set backspace=2
+
 " Remap escape key with jj
 inoremap jj <ESC>
 
@@ -97,7 +103,7 @@ nnoremap <leader>e :Explore<cr>
 nnoremap ; :
 
 " Auto set directory to current editing file
-set autochdir
+" set autochdir
 
 " Shortcuts for quickfix
 nnoremap co :copen<cr>
@@ -112,6 +118,16 @@ filetype plugin indent on
 
 " Toggle Goyo.vim
 nnoremap <leader>g :Goyo<cr>
+
+" Unite
+nnoremap <leader>/f :Unite -start-insert file file_rec/async<cr>
+nnoremap <leader>/b :Unite buffer<cr>
+nnoremap <leader>/g :Unite grep:.<cr>
+nnoremap <leader>/a :Unite ack:.<cr>
+
+" Ack
+nmap <leader>a :Ack ""<left>
+nmap <leader>A :Ack <C-r><C-w><cr>
 
 " Ino Build
 nnoremap <leader>ib :!ino build<cr>
