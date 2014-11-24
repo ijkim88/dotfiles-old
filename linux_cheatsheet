@@ -38,3 +38,25 @@ git submodule deinit [path]
 git rm [path]
 git commit -m "[comment]"
 git push
+
+# Updating a submodule
+[go to directory of got module]
+git pull origin master
+
+# Updating all submodules
+git submodule foreach git pull origin master
+
+# Installing Ruby
+mkdir $HOME/tmp
+cd $HOME/tmp
+wget [ruby stable source url]
+tar -xzvf [ruby .tar.gz]
+cd [ruby folder]
+./configure --prefix=$HOME && make && make install
+export PATH=/home/username/bin/:.:$PATH
+
+# Installing Ruby Gems
+http://www.r-bloggers.com/installing-ruby-on-linux-as-a-user-other-than-root/
+
+# Building VIM from Source
+https://wincent.com/wiki/building_Vim_from_source
