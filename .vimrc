@@ -81,10 +81,10 @@ nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Text wrap
-set wrap
-set textwidth=79
-set formatoptions=t
-" set colorcolumn=85
+"set wrap
+"set textwidth=79
+"set formatoptions=t
+"set colorcolumn=85
 
 " Fix backsapce
 set backspace=2
@@ -94,7 +94,7 @@ inoremap jj <ESC>
 
 " Remap window splits
 nnoremap <leader>s :split<cr><C-W>j
-nnoremap <leader>v :vsplit<cr><C-W>l
+nnoremap <leader>vs :vsplit<cr><C-W>l
 
 " Shortcut to Explore
 nnoremap <leader>e :Explore<cr>
@@ -142,11 +142,6 @@ nnoremap <leader>is :!ino serial<cr>
 nnoremap <leader>ir :cd ~/Dropbox/Programming/Arduino/empty/<cr>
     \:!ino upload<cr>
     \:cd %:p:h/..<cr>
-
-" Python-Mode options
-let g:pymode_options = 0
-let g:pymode_lint_signs = 0
-let g:pymode_lint_on_write = 0
 
 "nnoremap <leader>x :set filetype=xml<cr>
 "  \:source ~/.vim/bundle/xmledit/ftplugin/xml.vim<cr>
