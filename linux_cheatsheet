@@ -31,6 +31,11 @@ git submodule update --init
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 
+# If having trouble pushing to github
+git remote set-url origin https://username@github.com/user/repo.git
+unset SSH_ASKPASS
+git push origin master
+
 # Installing new submodule
 git submodule add [git repo url]
 git add [files or '.' for all]
