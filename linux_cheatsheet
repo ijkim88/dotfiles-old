@@ -27,6 +27,10 @@ ln -s dotfiles/.vim/ .vim
 ln -s dotfiles/.vimrc .vimrc
 git submodule update --init
 
+# Configure git
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
 # Installing new submodule
 git submodule add [git repo url]
 git add [files or '.' for all]
