@@ -69,6 +69,7 @@ http://www.r-bloggers.com/installing-ruby-on-linux-as-a-user-other-than-root/
 
 # Building VIM from Source
 https://wincent.com/wiki/building_Vim_from_source
+http://www.xorpd.net/blog/vim_python3_install.html
 
 # Install ack
 curl http://beyondgrep.com/ack-2.14-single-file > ~/bin/ack && chmod 0755 !#:3
