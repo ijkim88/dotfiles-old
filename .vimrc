@@ -129,20 +129,6 @@ nnoremap <leader>/a :Unite ack:.<cr>
 nmap <leader>a :Ack ""<left>
 nmap <leader>A :Ack <C-r><C-w><cr>
 
-" Ino Build
-nnoremap <leader>ib :!ino build<cr>
-
-" Ino Upload
-nnoremap <leader>iu :!ino upload<cr>
-
-" Ino Serial
-nnoremap <leader>is :!ino serial<cr>
-
-" Ino Reset
-nnoremap <leader>ir :cd ~/Dropbox/Programming/Arduino/empty/<cr>
-    \:!ino upload<cr>
-    \:cd %:p:h/..<cr>
-
 "nnoremap <leader>x :set filetype=xml<cr>
 "  \:source ~/.vim/bundle/xmledit/ftplugin/xml.vim<cr>
 
