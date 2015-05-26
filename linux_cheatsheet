@@ -55,6 +55,9 @@ git pull origin master
 # Updating all submodules
 git submodule foreach git pull origin master
 
+# Installing Python
+http://toomuchdata.com/2014/02/16/how-to-install-python-on-centos/
+
 # Installing Ruby
 mkdir $HOME/tmp
 cd $HOME/tmp
