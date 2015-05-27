@@ -67,6 +67,9 @@ make && make altinstall
 export PATH=~/bin/:$PATH
 export LD_LIBRARY_PATH=~/local/lib
 
+# Python 3 and pyvenv
+https://robinwinslow.co.uk/2013/12/26/python-3-4-virtual-environment/
+
 # Installing Ruby
 mkdir $HOME/tmp
 cd $HOME/tmp
