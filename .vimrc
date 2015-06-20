@@ -97,7 +97,7 @@ nnoremap <leader>s :split<cr><C-W>j
 nnoremap <leader>vs :vsplit<cr><C-W>l
 
 " Close split and focus
-nnoremap w :on<cr>
+nnoremap <leader>w :on<cr>
 
 " Shortcut to Explore
 nnoremap <leader>e :Explore<cr>
