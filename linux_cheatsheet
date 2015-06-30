@@ -36,6 +36,10 @@ git remote set-url origin https://username@github.com/user/repo.git
 unset SSH_ASKPASS
 git push origin master
 
+# Remove a bad commit on git
+git reset --soft HEAD^
+git push origin +master
+
 # Installing new submodule
 git submodule add [git repo url]
 git add [files or '.' for all]
