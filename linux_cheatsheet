@@ -40,6 +40,14 @@ git push origin master
 git reset --soft HEAD^
 git push origin +master
 
+# Fixing author email for commits
+git clone --bare https://github.com/user/repo.git
+cd repo.git
+run 'git-author-rewrite.sh' in scripts folder
+verify by running 'git log | grep Author | sort | unique'
+git remote add origin https://username@github.com/user/repo.git
+git push --force --tags origin 'refs/heads/*'
+
 # Installing new submodule
 git submodule add [git repo url]
 git add [files or '.' for all]
