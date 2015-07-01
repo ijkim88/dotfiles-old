@@ -17,6 +17,10 @@ fi
 
 # Set some environment variables
 export EDITOR=vim   # Use with CTRL-X_CTRL-E to open in editor and run when quit
+export PATH=~/bin/:$PATH
+export LD_LIBRARY_PATH=~/local/lib
+export GEM_HOME=~/local/gems
+export RUBYOPT=rubygems
 
 # Aliases and Functions
 alias ls='ls -GFh'
