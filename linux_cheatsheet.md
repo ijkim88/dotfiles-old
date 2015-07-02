@@ -51,6 +51,8 @@ git push origin +master
 ```
 
 # Fixing author email for commits
+This will change all of the authors to the new author
+
 ```shell
 git clone --bare https://github.com/user/repo.git
 cd repo.git
@@ -81,7 +83,7 @@ git push
 ```
 
 # Updating a submodule
-[go to directory of git module]
+Go to the directory of the git module to update
 
 ```shell
 git pull origin master
@@ -93,7 +95,6 @@ git submodule foreach git pull origin master
 ```
 
 # Installing Python
-http://toomuchdata.com/2014/02/16/how-to-install-python-on-centos/
 ```shell
 mkdir $HOME/tmp
 cd $HOME/tmp
@@ -121,7 +122,14 @@ export PATH=~/bin/:$PATH
 ```
 
 # Installing Ruby Gems
-http://www.r-bloggers.com/installing-ruby-on-linux-as-a-user-other-than-root/
+Download latest ruby gems using `wget` from https://rubygems.org
+
+```shell
+tar -xzvf [rubygems .tar.gz]
+ruby setup.rb
+export GEM_HOME=~/local/gems
+export RUBYOPT=rubygems
+```
 
 # Building VIM from Source
 https://wincent.com/wiki/building_Vim_from_source
@@ -130,4 +138,10 @@ http://www.xorpd.net/blog/vim_python3_install.html
 # Install ack
 ```shell
 curl http://beyondgrep.com/ack-2.14-single-file > ~/bin/ack && chmod 0755 !#:3
+```
+
+# Install pip2 and pip2.7
+```
+wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate
+python2.7 get-pip.py
 ```
