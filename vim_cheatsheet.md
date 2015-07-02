@@ -1,13 +1,16 @@
 # Open all files in a directory
 `:args [path]/*`
 
-# Open all files with extension '**' makes it recursive
+# Open all files in a directory (recursively)
+The extension '**' makes it recursive
 `:args [path]/**/*.[extension]`
 
 # Create new buffer
 `:enew`
 
-# Ack Shortcuts (`<leader>a` or `<leader>A`)
+# Ack Shortcuts
+Enter Ack with `<leader>a` or `<leader>A`
+
 ```
 o    to open (same as enter)
 O    to open and close quickfix window
