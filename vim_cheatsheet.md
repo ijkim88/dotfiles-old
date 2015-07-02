@@ -1,13 +1,14 @@
 # Open all files in a directory
-:args [path]/*
+`:args [path]/*`
 
 # Open all files with extension '**' makes it recursive
-:args [path]/**/*.[extension]
+`:args [path]/**/*.[extension]`
 
 # Create new buffer
-:enew
+`:enew`
 
-# Ack Shortcuts (<leader>a or <leader>A)
+# Ack Shortcuts (`<leader>a` or `<leader>A`)
+```
 o    to open (same as enter)
 O    to open and close quickfix window
 go   to preview file (open but maintain focus on ack.vim results)
@@ -18,3 +19,4 @@ H    to open in horizontal split silently
 v    to open in vertical split
 gv   to open in vertical split silently
 q    to close the quickfix window
+```
