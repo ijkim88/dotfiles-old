@@ -3,6 +3,7 @@
 
 # Open all files in a directory (recursively)
 The extension '**' makes it recursive
+
 `:args [path]/**/*.[extension]`
 
 # Create new buffer
