@@ -24,3 +24,7 @@ v    to open in vertical split
 gv   to open in vertical split silently
 q    to close the quickfix window
 ```
+
+# Get current filename
+`:echo @%`
+

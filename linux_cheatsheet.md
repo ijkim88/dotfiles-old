@@ -145,3 +145,29 @@ curl http://beyondgrep.com/ack-2.14-single-file > ~/bin/ack && chmod 0755 !#:3
 wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate
 python2.7 get-pip.py
 ```
+
+# Grep multiple words
+In this example, search warning, error, and critical words in a text log file
+called `var/log/messages`, enter:
+
+```shell
+grep 'warning\|error\|critical' /var/log/messages
+```
+
+To just match words add `-w` with:
+
+```shell
+grep -w 'warning\|error\|critical' /var/log/messages
+```
+
+egrep command can skip the above syntax and use the following syntax:
+
+```shell
+egrep -w 'warning|error|critical' /var/log/messages
+```
+
+I recommend that you pass the `-i` (ignore case) and `--color` option as follows:
+
+```shell
+egrep -wi --color 'warning|error|critical' /var/log/messages
+```
