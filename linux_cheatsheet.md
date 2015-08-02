@@ -1,3 +1,29 @@
+# Install Centos 7 and MATE
+First install Centos 7 minimal
+
+```shell
+yum install epel-release
+yum groupinstall "X Window System"
+yum groupinstall "MATE Desktop"
+```
+
+To start the Graphical Interface
+
+```shell
+systemctl isolate graphical.target
+```
+
+To have MATE boot as default devektop environment
+```shell
+systemctl set-default graphical.target
+```
+
+which is the equivalent of:
+```shell
+rm '/etc/systemd/system/default.target'
+ln -s /usr/lib/systemd/system/graphical.target' '/etc/systemd/system/default.target'
+```
+
 # How to install tmux on Linux without root access
 ```shell
 cd ~
