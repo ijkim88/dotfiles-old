@@ -1,3 +1,16 @@
+# Setup Wireless on Centos 7 Minimal
+Install NetworkManager-wifi by mounting USB ISO and install from Packages directory
+```shell
+rpm -i NetworkManager-wifi
+
+chkconfig NetworkManager on
+service NetworkManager start
+chkconfig network off
+chkconfig wpa_supplicant off
+
+service NetworkManager restart
+```
+
 # Install Centos 7 and MATE
 First install Centos 7 minimal
 
