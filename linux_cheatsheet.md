@@ -38,19 +38,17 @@ ln -s /usr/lib/systemd/system/graphical.target' '/etc/systemd/system/default.tar
 ```
 
 # How to install tmux on Linux without root access
+First install libevent dependency:
 ```shell
-cd ~
-mkdir local
-mkdir temp
-mv tmux-1.5.tar.gz temp
-mv libevent-2.0.12-stable.tar.gz temp
-cd temp
-tar xvfz tmux-1.5.tar.gz
 tar xvfz libevent-2.0.12-stable.tar.gz
 cd libevent-2.0.12-stable
 ./configure --prefix=$HOME/local
-make
-make install
+make && make install
+```
+
+Then install tmux:
+```shell
+tar xvfz tmux-1.5.tar.gz
 cd ../tmux-1.5
 DIR="$HOME/local"
 ./configure CFLAGS="-I$DIR/include" LDFLAGS="-L$DIR/lib"
@@ -58,7 +56,6 @@ make
 cp tmux ~/local/bin
 export PATH=$HOME/local/bin:$PATH
 export LD_LIBRARY_PATH="$HOME/local/lib"
-tmux
 ```
 
 # Setting up dotfiles on new system
