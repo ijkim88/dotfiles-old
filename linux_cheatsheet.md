@@ -141,6 +141,27 @@ git pull origin master
 git submodule foreach git pull origin master
 ```
 
+# Setup a remote repository for Git
+First setup the remote respository:
+```shell
+ssh git@example.com
+mkdir my_project.git
+cd my_project.git
+git init --bare
+git update-server-info # If planning to serve via HTTP
+exit
+```
+
+On the local machine:
+```shell
+cd my_project
+git init
+git add .
+git commit -m "Commit message"
+git remote add origin git@example.com:my_project.git
+git push -u origin master
+```
+
 # Installing Python
 ```shell
 mkdir $HOME/tmp
