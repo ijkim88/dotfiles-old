@@ -37,6 +37,17 @@ rm '/etc/systemd/system/default.target'
 ln -s /usr/lib/systemd/system/graphical.target' '/etc/systemd/system/default.target'
 ```
 
+# Use share folders for VirtualBox
+Install Guest Additions
+Open the VM settings and go to Shared Folders to define the folders
+
+```shell
+sudo mount -t vboxsf -o rw,uid=1000,gid=1000 [name from VBox] [destination]
+```
+
+# Install VirtualBox on CentOS 7 Headless Server
+http://www.unixmen.com/install-oracle-virtualbox-and-manage-it-using-phpvirtualbox-on-centos-7-headless-server/
+
 # How to install tmux on Linux without root access
 First install libevent dependency:
 ```shell
