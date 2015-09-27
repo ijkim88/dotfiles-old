@@ -37,23 +37,29 @@ rm '/etc/systemd/system/default.target'
 ln -s /usr/lib/systemd/system/graphical.target' '/etc/systemd/system/default.target'
 ```
 
+# Use share folders for VirtualBox
+Install Guest Additions
+Open the VM settings and go to Shared Folders to define the folders
+
+```shell
+sudo mount -t vboxsf -o rw,uid=1000,gid=1000 [name from VBox] [destination]
+```
+
 # Install VirtualBox on CentOS 7 Headless Server
 http://www.unixmen.com/install-oracle-virtualbox-and-manage-it-using-phpvirtualbox-on-centos-7-headless-server/
 
 # How to install tmux on Linux without root access
+First install libevent dependency:
 ```shell
-cd ~
-mkdir local
-mkdir temp
-mv tmux-1.5.tar.gz temp
-mv libevent-2.0.12-stable.tar.gz temp
-cd temp
-tar xvfz tmux-1.5.tar.gz
 tar xvfz libevent-2.0.12-stable.tar.gz
 cd libevent-2.0.12-stable
 ./configure --prefix=$HOME/local
-make
-make install
+make && make install
+```
+
+Then install tmux:
+```shell
+tar xvfz tmux-1.5.tar.gz
 cd ../tmux-1.5
 DIR="$HOME/local"
 ./configure CFLAGS="-I$DIR/include" LDFLAGS="-L$DIR/lib"
@@ -61,7 +67,6 @@ make
 cp tmux ~/local/bin
 export PATH=$HOME/local/bin:$PATH
 export LD_LIBRARY_PATH="$HOME/local/lib"
-tmux
 ```
 
 # Setting up dotfiles on new system
@@ -134,6 +139,27 @@ git pull origin master
 # Updating all submodules
 ```shell
 git submodule foreach git pull origin master
+```
+
+# Setup a remote repository for Git
+First setup the remote respository:
+```shell
+ssh git@example.com
+mkdir my_project.git
+cd my_project.git
+git init --bare
+git update-server-info # If planning to serve via HTTP
+exit
+```
+
+On the local machine:
+```shell
+cd my_project
+git init
+git add .
+git commit -m "Commit message"
+git remote add origin git@example.com:my_project.git
+git push -u origin master
 ```
 
 # Installing Python
