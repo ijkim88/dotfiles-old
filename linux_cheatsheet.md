@@ -174,8 +174,13 @@ export RUBYOPT=rubygems
 ```
 
 # Building VIM from Source
-https://wincent.com/wiki/building_Vim_from_source
-http://www.xorpd.net/blog/vim_python3_install.html
+* https://wincent.com/wiki/building_Vim_from_source
+* http://www.xorpd.net/blog/vim_python3_install.html
+
+## For Python 2.7
+```shell
+./configure --enable-perlinterp --enable-pythoninterp --enable-rubyinterp --enable-cscope --enable-multibyte --with-features=huge --disable-nls --prefix=$HOME/local --with-python-config-dir=$HOME/local/lib/python2.7/config --with-compiledby="ijkim88@gmail.com"
+```
 
 # Install ack
 ```shell
