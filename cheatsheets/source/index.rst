@@ -15,6 +15,7 @@ Contents:
    centos
    git
    linux-tricks
+   ssh
    sw-install
    vim
    virtualbox
