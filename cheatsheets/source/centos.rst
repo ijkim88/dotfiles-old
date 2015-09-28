@@ -1,4 +1,4 @@
-Centos
+CentOS
 ======
 
 Setup Wireless on Centos 7 Minimal
