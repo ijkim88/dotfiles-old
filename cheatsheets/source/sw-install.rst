@@ -8,7 +8,16 @@ Install pre-requisites
 
 .. code-block:: shell
 
-   $ yum install gcc openssl openssl-devel zlib zlib-devel
+   $ yum install \
+   $ gcc \
+   $ libxml2 \
+   $ libxml2-devel \
+   $ libxslt \
+   $ libxslt-devel \
+   $ openssl \
+   $ openssl-devel \
+   $ zlib \
+   $ zlib-devel
 
 Copy the download link of the Python source tar files and follow these steps
 
