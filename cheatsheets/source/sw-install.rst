@@ -137,3 +137,65 @@ Be sure to export the ``PATH`` and ``LD_LIBRARY_PATH``. Best to add it to the ``
    $ export PATH=~/bin/:$PATH
    $ export LD_LIBRARY_PATH=~/local/lib
 
+
+RPMForge Respository
+--------------------
+
+**RPMForge** repository is a utility used to install third party softwre packages under **RHEL** and **CentOS**. It provides more than 5000 software packages in the **rpm** format for these Linux distributions.
+
+The complete list can be found in the GitHub repository: https://github.com/repoforge/rpms
+
+First verify whether the system is 32-bit or 64-bit using ``uname -r``:
+
+.. code-block:: shell
+
+   i686 i686 i386 GNU/Linux         # 32-bit
+   x86_64 x86_64 x86_64 GNU/Linux   # 64-bit
+
+Download and install the **RPMForge** repository:
+
+.. code-block:: shell
+
+   $ wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el7.rf.x86_64.rpm
+   $ rpm -Uvh rpmforge-release-0.5.3-1.el7.rf.x86_64.rpm
+
+Import the RPMForge respository key:
+
+.. code-block:: shell
+
+   $ wget http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt
+   $ rpm --import RPM-GPG-KEY.dag.txt
+
+
+.. note:: The imported **GPG** key stored under **/etc/pki/rpm-gpg** directory as a file **RPM-GPG-KEY-rpmforge-dag**.
+
+To install packages::
+
+   $ yum --enablerepo=rpmforge install aria2
+
+To disable **RPMForge** repository simply open the **/etc/yum.repos.d/rpmforge.repo**::
+
+   $ vi /etc/yum.repos.d/rpmforge.repo
+
+Change "**enabled=1**" to "**enabled=0**":
+
+.. code-block:: shell
+
+   ### Name: RPMforge RPM Repository for RHEL 6 - dag
+   ### URL: http://rpmforge.net/
+   [rpmforge]
+   name = RHEL $releasever - RPMforge.net - dag
+   baseurl = http://apt.sw.be/redhat/el6/en/$basearch/rpmforge
+   mirrorlist = http://apt.sw.be/redhat/el6/en/mirrors-rpmforge
+   enabled = 0
+   protect = 0
+   gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
+   gpgcheck = 1
+
+
+Install Rar/Unrar
+~~~~~~~~~~~~~~~~~
+
+Follow the instructions the previous sections and then install with yum::
+
+   $ yum install unrar rar
