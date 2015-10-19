@@ -14,6 +14,7 @@ Install pre-requisites
    $ libxml2-devel \
    $ libxslt \
    $ libxslt-devel \
+   $ ncurses-devel \
    $ openssl \
    $ openssl-devel \
    $ zlib \
