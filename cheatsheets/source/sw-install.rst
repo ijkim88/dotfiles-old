@@ -209,3 +209,36 @@ Install Rar/Unrar
 Follow the instructions the previous sections and then install with yum::
 
    $ yum install unrar rar
+
+
+Install Google Chrome
+---------------------
+
+First download and install the key from the Google Linux Repository: http://www.google.com/linuxrepositories/
+
+.. code-block:: shell
+
+   $ wget https://dl.google.com/linux/linux_signing_key.pub
+   $ sudo rpm --import linux_signing_key.pub
+
+You can verify the key installation by running::
+
+   $ rpm -qi gpg-pubkey-7fac5591-*
+
+After installing the key, create a repo file in ``/etc/yum.repos.d/google-chrome.repo``
+
+.. code-block:: shell
+
+   # For 32-bit
+   [google-chrome]
+   name=Google Chrome 32-bit
+   baseurl=http://dl.google.com/linux/chrome/rpm/stable/i386
+
+   # For 64-bit
+   [google-chrome]
+   name=Google Chrome 64-bit
+   baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
+
+Now install the Chrome browser using yum::
+
+   $ sudo yum install google-chrome-stable
