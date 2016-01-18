@@ -93,6 +93,20 @@ Updating all submodules
    $ git submodule foreach git pull origin master
 
 
+push.default Matching vs. Simple
+--------------------------------
+
+``git push`` can push all branches or a single one dependent on this configuration.
+
+**Matching** will push all the branches to the remote branch and would merge them. If you don't want to push all branches, you can push the current branch only::
+
+   $ git config --global push.default matching
+
+So, it's better to use **Simple** and push your code branch by branch. It's better to push branches manually and individually::
+
+   $ git config --global push.default simple
+
+
 Setup a remote repository for Git
 ---------------------------------
 
