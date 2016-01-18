@@ -75,6 +75,14 @@ Removing a submodule
    $ git push
 
 
+Initializing all submodules
+---------------------------
+
+.. code-block:: shell
+
+   $ git submodule update --init
+
+
 Updating a submodule
 --------------------
 
