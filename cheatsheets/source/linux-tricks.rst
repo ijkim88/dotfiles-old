@@ -19,3 +19,23 @@ egrep command can skip the above syntax and use the following syntax::
 I recommend that you pass the ``-i`` (ignore case) and ``--color`` options as follows::
 
    $ egrep -wi --color 'warning|error|critical' /var/log/messages
+
+
+Get Ports Info Using netstat
+----------------------------
+
+To display open ports and established TCP connections, enter::
+
+   $ netstat -vatn
+
+To display only open UDP ports try the following command::
+
+   $ netstat -vaun
+
+To display open TCP/UDP ports that are listening::
+
+   $ netstat -vltun
+
+If you want to see FQDN, try removing the ``-n`` flag::
+
+   $ netstat -vat
