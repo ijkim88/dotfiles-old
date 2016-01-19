@@ -17,6 +17,8 @@ Install pre-requisites
    $ ncurses-devel \
    $ openssl \
    $ openssl-devel \
+   $ sqlite \
+   $ sqlite-devel \
    $ zlib \
    $ zlib-devel
 
