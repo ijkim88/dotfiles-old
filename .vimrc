@@ -119,6 +119,9 @@ execute pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
+" Tab spacing based on filetype
+autocmd FileType rst setlocal shiftwidth=3 tabstop=3
+
 " Toggle Goyo.vim
 nnoremap <leader>g :Goyo<cr>
 
