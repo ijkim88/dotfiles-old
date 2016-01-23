@@ -60,6 +60,14 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Easier tab nagivation
+nnoremap <C-[> :tabprevious<CR>
+nnoremap <C-]> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
+"inoremap <C-[> <ESC>:tabprevious<CR>i
+"inoremap <C-]> <ESC>:tabnext<CR>i
+"inoremap <C-t> <ESC>:tabnew<CR>i
+
 " Smart to move to first char and last char in a line
 map H ^
 map L $
