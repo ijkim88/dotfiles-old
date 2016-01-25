@@ -48,3 +48,24 @@ Get current filename
 Get current filename using::
 
    :echo @%
+
+
+Navigation Shortcuts
+--------------------
+
+* ``^E`` - scroll the window down
+* ``^Y`` - scroll the window up
+* ``^F`` - scroll down one page
+* ``^B`` - scroll up one page
+* ``H`` - move cursor to the top of the window
+* ``M`` - move cursor to the middle of the window
+* ``L`` - move cursor to the bottom of the window
+* ``gg`` - go to top of file
+
+Resize windows
+--------------
+
+For a **split window** ``Ctrl-w +`` and ``Ctrl-w -`` to resize the height of the current window by a single row
+For a **vsplit window** ``Ctrl-w >`` and ``Ctrl-w <`` to resize the height of the current window by a single column
+These key combinations accept a count prefix so that you can change the window size in larger steps. For example ``10 Ctrl-w +`` increases the window size by 10 lines.
+To resize all windows to equal dimentions based on their splits, you can use ``Ctrl-w =``
