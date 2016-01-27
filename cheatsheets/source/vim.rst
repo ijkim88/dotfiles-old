@@ -69,3 +69,18 @@ For a **split window** ``Ctrl-w +`` and ``Ctrl-w -`` to resize the height of the
 For a **vsplit window** ``Ctrl-w >`` and ``Ctrl-w <`` to resize the height of the current window by a single column
 These key combinations accept a count prefix so that you can change the window size in larger steps. For example ``10 Ctrl-w +`` increases the window size by 10 lines.
 To resize all windows to equal dimentions based on their splits, you can use ``Ctrl-w =``
+
+Spell Checking
+--------------
+
+* ``:set spell spelllang=en_us`` - Start spell check
+* ``:set nospell`` - Stop spell check
+* ``]s`` - next mispelled word
+* ``[s`` - previous mispelled word
+* ``]S`` - next mispelled word (only bad words, not at rare words or words for another region)
+* ``[S`` - previous mispelled word (only bad words, not at rare words or words for another region)
+* ``z=`` - list of suggestions
+* ``zg`` - add to dictionary
+* ``zG`` - add to internal word list (only in buffers where spell is set
+* ``zug`` - undo add to dictionary
+* ``zuG`` - undo add to internal word list
