@@ -1,5 +1,7 @@
 # Make terminal look better with colors
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+#export PS1="\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$ "
+export PS1="\[\e[32m\]\h:\[\e[m\]\W\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
@@ -23,8 +25,8 @@ export GEM_HOME=~/local/gems
 export RUBYOPT=rubygems
 
 # Aliases and Functions
-alias ls='ls -GFh'
-alias ll='ls -GHlah'
+alias ls='ls -GFh --color'
+alias ll='ls -GHlah --color'
 alias grep='grep --color=auto'
 alias editprofile='vim ~/.bash_profile'
 alias sourceprofile='source ~/.bash_profile'
