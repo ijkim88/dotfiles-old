@@ -29,6 +29,19 @@ Remove a bad commit on Git
    $ git reset --soft HEAD^
    $ git push origin +master
 
+Amend most recent commit message
+--------------------------------
+
+.. code-block:: shell
+
+   $ git commit --amend -m "New commit message"
+
+If you've already pushed your commit up to your remote branch, then you'll need to force push the commit with:
+
+.. code-block:: shell
+
+   $ git push <remote> <branch> --force   # or
+   $ git push <remote> <branch> -f
 
 Fixing author remails for commits
 ---------------------------------
