@@ -47,3 +47,26 @@ which is the equivalent of
 
    $ rm '/etc/systemd/system/default.target'
    $ ln -s '/usr/lib/systemd/system/graphical.target' '/etc/systemd/system/default.target'
+
+Remove Old Kernels on Fedora/CentOS/RHEL
+----------------------------------------
+
+Check Installed Kernels
+
+.. code-block:: shell
+
+   $ rpm -q kernel
+   kernel-3.10.0-229.el7.x86_64
+   kernel-3.10.0-229.11.1.el7.x86_64
+   kernel-3.10.0-327.4.4.el7.x86_64
+
+Delete/Remove Old Kernels
+
+.. code-block:: shell
+
+   $ yum install yum-utils
+   $ package-cleanup --oldkernels --count=2
+
+Make Amount of Install Kernels Permanent by editing ``/etc/yum.conf`` and set::
+
+   installonly_limit=2
