@@ -8,7 +8,7 @@ Install NetworkManager-wifi by mounting the USB ISO and install from Packages di
 
 .. code-block:: shell
 
-   $ rpm -i NetworkManager-wifi
+   $ yum localinstall NetworkManager-wifi
 
    $ chkconfig NetworkManager on
    $ service NetworkManager start
