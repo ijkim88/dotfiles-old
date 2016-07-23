@@ -39,3 +39,14 @@ To display open TCP/UDP ports that are listening::
 If you want to see FQDN, try removing the ``-n`` flag::
 
    $ netstat -vat
+
+
+Mount LVM Partitions
+--------------------
+
+Following this blog entry http://pissedoffadmins.com/os/mount-unknown-filesystem-type-lvm2_member.html::
+
+   $ modprobe dm-mod
+   $ vgchange -ay
+   $ lvscan
+   $ mount [source] [dest]
