@@ -244,3 +244,11 @@ After installing the key, create a repo file in ``/etc/yum.repos.d/google-chrome
 Now install the Chrome browser using yum::
 
    $ sudo yum install google-chrome-stable
+
+
+Uninstall all the installed Homebrew/Linuxbrew Packages
+-------------------------------------------------------
+
+Use the following command to remove all brew packages::
+
+   $ brew remove --force $(brew list)
